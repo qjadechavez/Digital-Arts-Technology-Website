@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/Favicon/favicon.ico" type="image/x-icon">
+    <title>Digital Arts Technology</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+        @media screen and (max-width: 600px) {
+            .section-content,
+            .section2-content,
+            .section4-content,
+            .section3-content,
+            .section5-content,
+            .section6-content,
+            .section7-content,
+            .section8-content,
+            .footer-content {
+                width: 90%;
+            }
+
+            .section-content {
+                margin-top: 0px;
+                text-align: left;
+                background-color: transparent;
+            }
+
+            .section-content h5 {
+                font-size: 15px;
+                margin-bottom: 15px;
+            }
+
+            .section-content p {
+                font-size: 1.2rem;
+            }
+
+            .buttons-container {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .buttons-container button {
+                padding: 12px 18px;
+                margin-right: 10px;
+                font-size: 12px;
+                font-weight: bold;
+                color: white;
+                border: 2px solid #fff;
+                cursor: pointer;
+            }
+
+            .course-cards {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .card img {
+                max-height: 150px;
+            }
+
+            .gallery-item {
+                flex-basis: calc(50% - 8px);
+            }
+
+            .more-button:hover {
+                background-color: transparent;
+                color: white;
+                transition: none;
+            }
+
+            .card:hover {
+                transform: none;
+                box-shadow: none;
+            }
+
+            .gallery-item:hover img {
+                transform: none;
+            }
+
+            .caption {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            @media (max-width: 768px) {
+                .image-container {
+                    max-width: 400px;
+                }
+
+                .image-container img {
+                    padding-top: 20%;
+                    max-width: 150px;
+                }
+            }
+
+            .social-icons a:hover {
+                background-color: #EFFFFB;
+            }
+
+            .footer-column h4 {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+
+            .footer-column p {
+                font-size: 0.9rem;
+                margin-bottom: 8px;
+            }
+
+            .footer-bottom p {
+                font-size: 0.5rem;
+            }
+
+            .footer-column {
+                flex-basis: 100%;
+            }
+            .footer-bottom {
+                width: 90%;
+            }
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+
+            .section-content,
+            .section2-content,
+            .section4-content,
+            .section3-content,
+            .section5-content,
+            .section6-content,
+            .section7-content,
+            .section8-content,
+            .footer-content {
+                width: 90%;
+            }
+
+            .section-content {
+                margin-top: 0px;
+                text-align: left;
+                background-color: transparent;
+            }
+
+            .section-content h5 {
+                font-size: 15px;
+                margin-bottom: 15px;
+            }
+
+            .section-content p {
+                font-size: 1.2rem;
+            }
+
+            .buttons-container {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .buttons-container button {
+                padding: 12px 18px;
+                margin-right: 10px;
+                font-size: 12px;
+                font-weight: bold;
+                color: white;
+                border: 2px solid #fff;
+                cursor: pointer;
+            }
+
+            .course-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .card img {
+                max-height: 125px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .gallery-item {
+                flex-basis: calc(50% - 8px);
+            }
+
+            .footer-column {
+                flex-basis: 100%;
+            }
+
+            .more-button:hover {
+                background-color: transparent;
+                color: white;
+                transition: none;
+            }
+
+            .card:hover {
+                transform: none;
+                box-shadow: none;
+            }
+
+            .gallery-item:hover img {
+                transform: none;
+            }
+
+            .caption {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .footer-bottom {
+                width: 90%;
+            }
+        }
+
+        @media screen and (min-width: 1025px) {
+
+            /* Section 2 and 4 Content */
+            .section-content,
+            .section2-content,
+            .section4-content,
+            .section3-content,
+            .section5-content,
+            .section6-content,
+            .section7-content,
+            .section8-content {
+                width: 80%;
+            }
+
+            .course-cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .card img {
+                max-height: 150px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                max-width: 600px;
+            }
+
+            .image-container img {
+                max-width: 150px;
+            }
+
+            .contact-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image-item {
+                width: 100%;
+                max-width: 300px;
+                margin-right: 0;
+            }
+
+            .map-link {
+                padding-bottom: 75%;
+            }
+        }
+        .reveal {
+            position: relative;
+            transform: translateY(150px);
+            opacity: 0;
+            transition:  all 2s ease;
+        }
+        .reveal.active{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <a href="#">
+            <img src="images/LOGOS/datLogo.png" alt="Your Logo" />
+        </a>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a class="closebtn" id="closeBtn" onclick="closeNav()">&times;</a>
+        <a href="#section1">Home</a>
+        <a href=" #section2">About</a>
+        <a href=" #section3">Courses</a>
+        <a href=" #section4">Trainors</a>
+        <a href=" #section5">Facilities</a>
+        <a href=" #section6">Partners</a>
+        <a href=" #section7">Contact</a>
+        <a href=" #section8">Enroll Now</a>
+    </div>
+    <div class="open-btn" id="openBtn" onclick="openNav()">MENU &#9776;</div>
+    <button onclick="goToTop()" id="goTopBtn" title="Go to top">&#8593;</button>
+
+    <body>
+        <section id="section1" class="video-section">
+            <video autoplay muted loop class="background-video">
+                <source src="images/newbg.mp4" type="video/mp4">
+            
+            </video>
+            <div class="section-content">
+                <h2>Welcome to: Digital Arts Technology<br />Training Center Inc.</h2>
+                <p>Expandinig Knowledge and Skills in Programming and Embarking Exciting Journey of Creativity and Innovation. Let your Imagination fly as you learn the latest tools and techniques in Digital World.</p>
+
+                <div class="buttons-container">
+                    <a href="APPLY NOW"><button class="apply-button">ENROLL NOW</button></a>
+                    <a href="#section2" onclick="smoothScroll('#section2')"><button class="more-button">ABOUT US</button></a>
+                </div>
+            </div>
+        </section>
+        <section id="section2">
+            <div class="section2-content reveal">
+                <h1>ABOUT US</h1>
+                <hr />
+                <h5>Digital Arts Technology</h5>
+                <p>Digital Arts Technology Training Center Inc., had recently established in June 2021.</p>
+                <p>The Institution is registered with the Securities and Exchange Commission with its Primary purpose: to operate as an Educational Institution which provides technical skills and vocational programs includeing specialized short courses, training, reviews, and National Certification. </p>
+                <p>The Institution shall endeavor to achieve the satisfaction of its various trainings and services to its stakeholders.</p>
+                <h5>Vission</h5>
+                <p> “To be the leading Institution that provides world-class technical skills and quality training in the latest trends in Digital Arts and Information Technology” </p>
+                <h5>Mission</h5>
+                <p> “To teach and train students to become globally competitive individual.” </p>
+                <h5> Objective </h5>
+                <p style="font-weight: bold;">Digital Arts Technology TC Inc, has its own objective and aims to:</p>
+                <ul>
+                    <li> Provide quality training to its students using the latest trends and technology in Computer Programming Digital Animation and Computer Systems Servicing; </li>
+                    <li> Prepare students to become globally competitive in their field of expertise and specialization; </li>
+                    <li> Respond to the increasing needs of global Industry in Information Technology, Innovations, Programming, and Digital Animation. </li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="custom-shape-divider-top-1690999581">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        
+          
+        <section id="section3">
+            <div class="section3-content reveal">
+                <h1>WHAT WE OFFER</h1>
+                <hr />
+                <h5 style="color: white;">Course Offered</h5>
+                <div class="course-cards">
+                    <div class="card">
+                        <img src="images/Course.images/OL/programmer.png" alt="Course 1" />
+                        <h3>Programming (Java) NCIII</h3>
+                        <p>A course that covers Java programming, a widely-used language for building applications and software.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/Course.images/OL/customer-care.png" alt="Course 2" />
+                        <h3>Contact Center Services NCII</h3>
+                        <p>Services related to managing and handling customer interactions through various communication channels.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/Course.images/OL/animation.png" alt="Course 3" />
+                        <h3>2D Animation NCIII</h3>
+                        <p>A course focused on creating animated content using two-dimensional graphics and techniques.</p>
+                    </div>
+                </div>
+                <h5 style="color: white;">Institutional Certificate Courses</h5>
+                <div class="course-cards">
+                    <div class="card">
+                        <img src="images/Course.images/ICC/typewriter.png" alt="Course 1" />
+                        <h3>Stenography</h3>
+                        <p>A course that enhances and develops the ability and skills in stenographic  stokes and speed writing ability to be able to work rapidly and efficiently.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/Course.images/ICC/adobe-photoshop.png" alt="Course 2" />
+                        <h3>Adobe Photoshop</h3>
+                        <p>A course that provides learning using powerful software for image editing, creaing logos, character designs, posters, and magazine layouts.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/Course.images/ICC/video-editing.png" alt="Course 3" />
+                        <h3>Video Graphics</h3>
+                        <p>A course designed to create and manipulate video content: digital and visual effects, motions, graphics, texting, layering, and compositing.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/Course.images/ICC/visual-communication.png" alt="Course 4" />
+                        <h3>Visual Graphics</h3>
+                        <p>A course that will explore the use of different features and tools of Corel Draw software: focus on a vector illustration, page layout application, and other visual representation and communications.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/Course.images/ICC/digital-animation.png" alt="Course 5" />
+                        <h3>Digital Animation</h3>
+                        <p>A course that will teach creating animated content using multiple software applications and digital tools in animation.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/Course.images/ICC/traditional-animation.png" alt="Course 6" />
+                        <h3>Traditional Animation</h3>
+                        <p>A course that will enhance the ability and techniques in traditional drawing and producing cleaned-up and in-between drawings in accordance with industry standards.</p>
+                    </div>
+                </div>
+        </section>
+        <div class="custom-shape-divider-top-1691000405">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <section id="section4">
+            <div class="section4-content reveal">
+                <h1>OUR TRAINORS</h1>
+                <hr />
+                <h5>For Programming (JAVA) NCIII </h5>
+                <ul>
+                    <li>NC Holder</li>
+                    <li>National TVET Trainer Certified</li>
+                    <li>Oracle Certified Associate</li>
+                    <li>JAVA S8 Programmer</li>
+                    <li>Industry Pratitioner</li>
+                    <li>Hard Core Programmer & Web Developer</li>
+                    <li>Veen in Teaching Profession for a years</li>
+                </ul>
+                <h5>Our Goal </h5>
+                <ul>
+                    <li>Helping students grow</li>
+                    <li>Instilling more learnings</li>
+                    <li>Expanding Knowledge and skills</li>
+                    <li>Upskilling</li>
+                    <li>Industry Pratitioner</li>
+                    <li>Preparing students for possible employment after graduation</li>
+                </ul>
+                
+            </div>
+        </section>
+
+        <div class="custom-shape-divider-top-1690999581">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        
+
+        <section id="section5">
+            <div class="section5-content reveal">
+                <h1>FACILITIES</h1>
+                <hr />
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="images/Facilities.images/1.jpg" alt="Facility 1">
+                        <div class="caption">Reading Nook</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Facilities.images/2.jpg" alt="Facility 2">
+                        <div class="caption">Sanitizing Area</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Facilities.images/3.jpg" alt="Facility 3">
+                        <div class="caption">Hallway</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Facilities.images/11.jpg" alt="Facility 4">
+                        <div class="caption">Hallway</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Facilities.images/4.jpg" alt="Facility 5">
+                        <div class="caption">Learning Resourse Area</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Facilities.images/5.jpg" alt="Facility 6">
+                        <div class="caption">Lecture Area</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Facilities.images/16.jpg" alt="Facility 7">
+                        <div class="caption">Lecture Area</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Facilities.images/6.jpg" alt="Facility 8">
+                        <div class="caption">Server Area</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Facilities.images/7.jpg" alt="Facility 9">
+                        <div class="caption">Animation Area</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Facilities.images/8.jpg" alt="Facility 10">
+                        <div class="caption">Computer Laboratory</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Facilities.images/26.jpg" alt="Facility 11">
+                        <div class="caption">Computer Laboratory</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Facilities.images/9.jpg" alt="Facility 12">
+                        <div class="caption">Other Facilities</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="custom-shape-divider-top-1691000405">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <section id="section6">
+            <div class="section6-content reveal">
+                <h1>WE ARE RECOGNIZED BY:</h1>
+                <hr>
+                <div class="image-container">
+                    <a href="https://www.deped.gov.ph/" target="_blank" class="image-link">
+                        <img src="images/LOGOS/Logo-DepEd-1.png" alt="Image 1">
+                    </a>
+                    <a href="https://www.tesda.gov.ph/" target="_blank" class="image-link">
+                        <img src="images/LOGOS/Tesda_logo_PNG1.png" alt="Image 2">
+                    </a>
+                </div>
+        </section>
+
+        <div class="custom-shape-divider-top-1690999581">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        
+
+        <section id="section7">
+            <div class="section7-content reveal">
+                <h1>CONTACT US</h1>
+                <hr>
+                <div class="contact-container">
+                    <div class="image-item">
+                        <img src="images/ContactUs.images/location.png" alt="Image 1">
+                        <h3>LOCATION</h3>
+                        <p>Address: No2 Ipil St., Victorino Compound 1, Marikina Heights 1810 Marikina City, Philippines</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="images/ContactUs.images/telephone.png " alt="Image 2">
+                        <h3>PHONE</h3>
+                        <p>+(2) 87257578</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="images/ContactUs.images/email.png" alt="Image 3">
+                        <h3>EMAIL</h3>
+                        <p>digitalartstech01@gmail.com</p>
+                    </div>
+                </div>
+                <div class="map-link">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241.2606216431412!2d121.11874333372958!3d14.646292500000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b9ef5c65682d%3A0x43666ac21fa891f8!2sDigital%20Arts%20Technology%20Training%20Center%20Inc.!5e0!3m2!1sfil!2sph!4v1690558572083!5m2!1sfil!2sph" width="100%" height="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4 style="color: #4F98CA;">Contact Us</h4>
+                    <p>Email: digitalartstech01@gmail.com</p>
+                    <p>Phone: +(2) 87257578</p>
+                    <p>Address: No2 Ipil St., Victorino Compound 1, Marikina Heights 1810 Marikina City, Philippines</p>
+                </div>
+                <div class="footer-column">
+                    <h4 style="color: #4F98CA;">Useful Links</h4>
+                    <ul>
+                        <li><a href="#section1">Home</a></li>
+                        <li><a href="#section2">About</a></li>
+                        <li><a href="#section3">Courses</a></li>
+                        <li><a href="#section4">Trainors</a></li>
+                        <li><a href="#section5">Facilities</a></li>
+                        <li><a href="#section6">Partners</a></li>
+                        <li><a href="#section7">Contact</a></li>
+                        <li><a href="#section8">Enroll Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 style="color: #4F98CA;">Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/DigitalArts01/" class="facebook-icon"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="font-size: 18px; font-weight: 500;">&copy; 2023 Digital Arts Technology Training Center Inc. All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+        <script>
+            window.addEventListener('scroll', reveal);
+
+            function reveal(){
+                var reveals = document.querySelectorAll('.reveal');
+
+                for(var i = 0; i < reveals.length; i++){
+                    var windowHeight = window.innerHeight;
+                    var revealTop = reveals[i].getBoundingClientRect().top;
+                    var revealPoint = 100;
+
+                    if(revealTop < windowHeight - revealPoint){
+                        reveals[i].classList.add('active');
+                    }
+                    else{
+                        reveals[i].classList.remove('active');
+                    }
+
+                }
+            }
+        </script>
+
+    </body>
+
+</html>

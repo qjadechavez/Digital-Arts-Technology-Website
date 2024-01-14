@@ -1,5 +1,4 @@
-
- body {
+body {
   font-family: "Lato", sans-serif;
   margin: 0;
   padding: 0;
@@ -159,6 +158,14 @@ section {
   color: white;
   font-size: 2rem;
   padding: 50px 0;
+}
+
+#about h1,
+#about h5,
+#about p,
+#about ul,
+#about li {
+  text-align: center;
 }
 
 #section1 {
@@ -338,7 +345,7 @@ section {
 .section2-content h5,
 .section4-content h5 {
   text-align: left;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   margin-bottom: 20px;
   color: black;
 
@@ -357,6 +364,27 @@ section {
   font-size: 1.2rem;
   line-height: 1.6;
   text-align: left;
+}
+
+.section2-content td {
+  border: 1px solid black;
+padding: 8px;
+text-align: left;
+font-size: 16px;
+}
+
+.section2-CV {
+  max-width: 50%;
+  height: 50%;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.larger-bold {
+  font-size: 20px;
+font-weight: bold;
 }
 
 #section3 {

@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <style>
-        <--Media Queries-->
         @media screen and (max-width: 600px) {
             .section-content,
             .section2-content,
@@ -36,6 +35,11 @@
 
             .section-content p {
                 font-size: 1.2rem;
+            }
+
+            .section2-content image{
+ width: 100%;
+ height: 100%;
             }
 
             .buttons-container {
@@ -234,6 +238,7 @@
             .card img {
                 max-height: 150px;
             }
+
         }
 
         @media (max-width: 768px) {
@@ -282,14 +287,15 @@
     <div id="mySidenav" class="sidenav">
         <a class="closebtn" id="closeBtn" onclick="closeNav()">&times;</a>
         <a href="#section1">Home</a>
-        <a href=" about">About</a>
+        <a href="#about">About</a>
         <a href=" #section3">Courses</a>
         <a href=" #section4">Trainors</a>
         <a href=" #section5">Facilities</a>
         <a href=" #section6">Partners</a>
         <a href=" #section7">Contact</a>
-        <a href=" #section8">Enroll Now</a>
+        <a href="#section1">Enroll Now</a>
     </div>
+
     <div class="open-btn" id="openBtn" onclick="openNav()">MENU &#9776;</div>
     <button onclick="goToTop()" id="goTopBtn" title="Go to top">&#8593;</button>
 
@@ -304,29 +310,47 @@
                 <p>Expandinig Knowledge and Skills in Programming and Embarking Exciting Journey of Creativity and Innovation. Let your Imagination fly as you learn the latest tools and techniques in Digital World.</p>
 
                 <div class="buttons-container">
-                    <a href="https://form.jotform.com/240032100416434?fbclid=IwAR1b5B7SvuWr231vNREDNr6NuNTgez5tqgWAaM5MSSwLIZ3vt5G8032jr7E"><button class="apply-button">ENROLL NOW</button></a>
-                     <a href="#about" onclick="smoothScroll('about')"><button class="more-button">ABOUT US</button></a>
+                    <a href="https://form.jotform.com/240032100416434?fbclid=IwAR1b5B7SvuWr231vNREDNr6NuNTgez5tqgWAaM5MSSwLIZ3vt5G8032jr7E" target="_blank" ><button class="apply-button">ENROLL NOW</button></a>
+                     <a href="#about" onclick="smoothScroll('#about')"><button class="more-button">ABOUT US</button></a>
             </div>
         </section>
+
         <section id="about">
             <div class="section2-content reveal">
                 <h1>ABOUT US</h1>
                 <hr />
-                <h5>Digital Arts Technology</h5>
-                <p>Digital Arts Technology Training Center Inc., had recently established in June 2021.</p>
-                <p>The Institution is registered with the Securities and Exchange Commission with its Primary purpose: to operate as an Educational Institution which provides technical skills and vocational programs includeing specialized short courses, training, reviews, and National Certification. </p>
-                <p>The Institution shall endeavor to achieve the satisfaction of its various trainings and services to its stakeholders.</p>
-                <h5>Vission</h5>
-                <p> “To be the leading Institution that provides world-class technical skills and quality training in the latest trends in Digital Arts and Information Technology” </p>
-                <h5>Mission</h5>
+                <h5>DIGITAL ARTS TECHNOLOGY TRAINING CENTER Inc.</h5>
+                <p>The <Strong>Digital Arts Technology Training Center Inc.</Strong>, had recently established in June 2021.</p>
+                <p>The Institution is registered with the Technical Education and Skills Development Authority (TESDA) and the Securities and Exchange Commission with its Primary purpose: To Operate as an Educational Institution that provides technical  skills and vocational programs including specialization short courses, training, reviews, and National Certification. </p>
+                <p>The Institution shall endeavor to satisfy its stakeholders with its various trainings and services.</p>
+                <h5>VISION</h5>
+                <p> “To be the Leading Institution that provides world-class technical skills and quality trainings in the latest trends in Digital Arts and Information Technology” </p>
+                <h5>MISSION</h5>
                 <p> “To teach and train students to become globally competitive individual.” </p>
-                <h5> Objective </h5>
-                <p style="font-weight: bold;">Digital Arts Technology TC Inc, has its own objective and aims to:</p>
+                <h5> OBJECTIVE </h5>
+                <p style="font-weight: bold;">Digital Arts Technology Training Center Inc, has its own objective and aims to:</p>
                 <ul>
                     <li> Provide quality training to its students using the latest trends and technology in Computer Programming Digital Animation and Computer Systems Servicing; </li>
                     <li> Prepare students to become globally competitive in their field of expertise and specialization; </li>
                     <li> Respond to the increasing needs of global Industry in Information Technology, Innovations, Programming, and Digital Animation. </li>
                 </ul>
+
+                <!--<table>
+                    <tr>
+                      <td class="larger-bold">Core Values</td>
+                    </tr>
+                    <tr>
+                      <td>D - Determined</td>
+                    </tr>
+                    <tr>
+                      <td>A - Achievers</td>
+                    </tr>
+                    <tr>
+                      <td>T - Technology Driven</td>
+                    </tr>
+                  </table>-->
+
+                  <img src="images/CORE_VALUES.png" alt="DAT_CoreValues" class="section2-CV">
             </div>
         </section>
 
@@ -408,9 +432,9 @@
                     <li>National TVET Trainer Certified</li>
                     <li>Oracle Certified Associate</li>
                     <li>JAVA S8 Programmer</li>
-                    <li>Industry Pratitioner</li>
+                    <li>Industry Practitioner</li>
                     <li>Hard Core Programmer & Web Developer</li>
-                    <li>Veen in Teaching Profession for a years</li>
+                    <li>Been in the Teaching Profession for a years</li>
                 </ul>
                 <h5>Our Goal </h5>
                 <ul>
@@ -418,7 +442,7 @@
                     <li>Instilling more learnings</li>
                     <li>Expanding Knowledge and skills</li>
                     <li>Upskilling</li>
-                    <li>Industry Pratitioner</li>
+                    <li>Industry Practitioner</li>
                     <li>Preparing students for possible employment after graduation</li>
                 </ul>
                 
@@ -438,52 +462,64 @@
                 <hr />
                 <div class="gallery">
                     <div class="gallery-item">
-                        <img src="images/Facilities.images/1.jpg" alt="Facility 1">
-                        <div class="caption">Reading Nook</div>
+                        <img src="images/Facilities.images/1.png" alt="Facility 1">
+                        <!--<div class="caption">Reading Nook</div>-->
                     </div>
                     <div class="gallery-item">
-                        <img src="images/Facilities.images/2.jpg" alt="Facility 2">
-                        <div class="caption">Sanitizing Area</div>
+                        <img src="images/Facilities.images/2.png" alt="Facility 2">
+                        <!--<div class="caption">Sanitizing Area</div>-->
                     </div>
                     <div class="gallery-item">
-                        <img src="images/Facilities.images/3.jpg" alt="Facility 3">
-                        <div class="caption">Hallway</div>
+                        <img src="images/Facilities.images/3.png" alt="Facility 3">
+                        <!--<div class="caption">Hallway</div>-->
                     </div>
                     <div class="gallery-item">
-                        <img src="images/Facilities.images/11.jpg" alt="Facility 4">
-                        <div class="caption">Hallway</div>
+                        <img src="images/Facilities.images/4.jpg" alt="Facility 4">
+                        <!--<div class="caption">Hallway</div>-->
                     </div>
                     <div class="gallery-item">
-                        <img src="images/Facilities.images/4.jpg" alt="Facility 5">
-                        <div class="caption">Learning Resourse Area</div>
+                        <img src="images/Facilities.images/5.jpg" alt="Facility 5">
+                        <!--<div class="caption">Learning Resourse Area</div>-->
                     </div>
                     <div class="gallery-item">
-                        <img src="images/Facilities.images/5.jpg" alt="Facility 6">
-                        <div class="caption">Lecture Area</div>
+                        <img src="images/Facilities.images/6.png" alt="Facility 6">
+                        <!--<div class="caption">Lecture Area</div>-->
                     </div>
                     <div class="gallery-item">
-                        <img src="images/Facilities.images/16.jpg" alt="Facility 7">
-                        <div class="caption">Lecture Area</div>
+                        <img src="images/Facilities.images/7.jpg" alt="Facility 7">
+                        <!--<div class="caption">Lecture Area</div>-->
                     </div>
                     <div class="gallery-item">
-                        <img src="images/Facilities.images/6.jpg" alt="Facility 8">
-                        <div class="caption">Server Area</div>
+                        <img src="images/Facilities.images/8.jpg" alt="Facility 8">
+                        <!--<div class="caption">Server Area</div>-->
                     </div>
                     <div class="gallery-item">
-                        <img src="images/Facilities.images/7.jpg" alt="Facility 9">
-                        <div class="caption">Animation Area</div>
+                        <img src="images/Facilities.images/9.jpg" alt="Facility 9">
+                        <!--<div class="caption">Animation Area</div>-->
                     </div>
                     <div class="gallery-item">
-                        <img src="images/Facilities.images/8.jpg" alt="Facility 10">
-                        <div class="caption">Computer Laboratory</div>
+                        <img src="images/Facilities.images/10.jpg" alt="Facility 10">
+                        <!--<div class="caption">Computer Laboratory</div>-->
                     </div>
                     <div class="gallery-item">
-                        <img src="images/Facilities.images/26.jpg" alt="Facility 11">
-                        <div class="caption">Computer Laboratory</div>
+                        <img src="images/Facilities.images/11.jpg" alt="Facility 11">
+                        <!--<div class="caption">Computer Laboratory</div>-->
                     </div>
                     <div class="gallery-item">
-                        <img src="images/Facilities.images/9.jpg" alt="Facility 12">
-                        <div class="caption">Other Facilities</div>
+                        <img src="images/Facilities.images/12.jpg" alt="Facility 12">
+                        <!--<div class="caption">Other Facilities</div>-->
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Facilities.images/13.jpg" alt="Facility 13">
+                        <!--<div class="caption">Computer Laboratory</div>-->
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Facilities.images/14.jpg" alt="Facility 14">
+                        <!--<div class="caption">Computer Laboratory</div>-->
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/Facilities.images/15.jpg" alt="Facility 15">
+                        <!--<div class="caption">Other Facilities</div>-->
                     </div>
                 </div>
             </div>
@@ -560,7 +596,7 @@
                         <li><a href="#section5">Facilities</a></li>
                         <li><a href="#section6">Partners</a></li>
                         <li><a href="#section7">Contact</a></li>
-                        <li><a href="#section8">Enroll Now</a></li>
+                        <li><a href="#section1">Enroll Now</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
